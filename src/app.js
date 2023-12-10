@@ -18,18 +18,25 @@ const { uuidv4, getAge} = require('./plugins');
     
 // });
 
+const getPokemonById = require('./js-foundation/promises');
+
+getPokemonById(23)
+.then((pokemon)=>console.log({pokemon}))
+.catch((error)=>new Error('Revise su aplicacion'))
 
 
-// // console.log(emailTemplate);
-const {buildMakePerson} = require('./js-foundation/factory');
 
-const makePerson = buildMakePerson( {uuidv4, getAge});
+// ! Referencia a las factory functions.
+// // // console.log(emailTemplate);
+// const {buildMakePerson} = require('./js-foundation/factory');
 
-const obj={
-    name:'jhon',
-    birthdate:'1979-10-27'
-};
+// const makePerson = buildMakePerson( {uuidv4, getAge});
 
-const jhon=makePerson(obj);
+// const obj={
+//     name:'jhon',
+//     birthdate:'1979-10-27'
+// };
 
-console.log(jhon);
+// const jhon=makePerson(obj);
+
+// console.log(jhon);
