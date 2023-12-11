@@ -1,4 +1,4 @@
-const { uuidv4, getAge} = require('./plugins');
+// const { uuidv4, getAge} = require('./plugins');
 
 // const {emailTemplate}=require('./js-foundation/template');
 
@@ -16,14 +16,16 @@ const { uuidv4, getAge} = require('./plugins');
 //     }
 //       console.log(user);  
     
-// });
+// // });
 
-const getPokemonById = require('./js-foundation/promises');
+// const getPokemonById = require('./js-foundation/promises');
 
-getPokemonById(23)
-.then((pokemon)=>console.log({pokemon}))
-.catch((error)=>new Error('Revise su aplicacion'))
+// getPokemonById(23)
+// .then( (pokemon) => console.log({pokemon}) )
 
+// .catch( (err) => console.log(err) )
+
+// .finally( () => console.log('Finalmente') );
 
 
 // ! Referencia a las factory functions.
@@ -40,3 +42,11 @@ getPokemonById(23)
 // const jhon=makePerson(obj);
 
 // console.log(jhon);
+
+const {buildLogger} = require('./plugins');
+
+const logger=buildLogger('app.js');
+
+logger.log('Hola Mundo');
+
+logger.error('Esto es algo malo');
